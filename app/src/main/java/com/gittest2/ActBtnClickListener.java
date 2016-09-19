@@ -15,7 +15,7 @@ public class ActBtnClickListener extends Activity {
         ((Button) findViewById(R.id.natehome)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.nate.com"));
                 startActivity(intent);
             }
         });
@@ -31,7 +31,8 @@ public class ActBtnClickListener extends Activity {
         ((Button) findViewById(R.id.gallery)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:911"));
+                Uri uri = Uri.parse("content://media/internal/images/media");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
